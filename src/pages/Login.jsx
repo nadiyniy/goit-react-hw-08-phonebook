@@ -33,7 +33,7 @@ const Register = () => {
           transition: { duration: 1 },
         }}
       >
-        <img src={phoneImage} alt="Phonebook"></img>
+        <img width={300} src={phoneImage} alt="Phonebook"></img>
       </StyledImageContainer>
       <StyledForm
         initial={{ x: 500, opacity: 0.5 }}

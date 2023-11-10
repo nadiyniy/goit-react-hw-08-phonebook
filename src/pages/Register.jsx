@@ -26,7 +26,7 @@ const Register = () => {
   return (
     <StyledWrapper>
       <StyledImageContainer>
-        <img src={phoneImage} alt="Phonebook" />
+        <img width={300} src={phoneImage} alt="Phonebook" />
       </StyledImageContainer>
       <StyledForm onSubmit={handleSubmit(submit)}>
         <h1>

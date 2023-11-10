@@ -61,6 +61,7 @@ export const StyledForm = styled(motion.form)`
 export const StyledImageContainer = styled(motion.div)`
   display: flex;
   width: 300px;
+  min-height: 562px;
   @media screen and (max-width: 767.98px) {
     display: none;
   }

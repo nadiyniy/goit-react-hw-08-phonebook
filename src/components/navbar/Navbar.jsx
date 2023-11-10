@@ -46,6 +46,19 @@ export const StyledContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+  button {
+    background-color: white;
+
+    padding: 5px 10px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 1px 1px black;
+    }
+  }
 `;
 
 export default Navbar;

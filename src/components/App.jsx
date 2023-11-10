@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import NotFound from 'pages/NotFound';
-import RegisterForm from 'pages/RegisterForm';
+import Register from 'pages/Register';
 import Login from 'pages/Login';
 import Contacts from 'pages/Contacts';
 import { useDispatch } from 'react-redux';
@@ -28,7 +28,7 @@ export const App = () => {
             </PrivateRoute>
           }
         />
-        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Route>
       <Route path="*" element={<NotFound />}></Route>

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { GrContactInfo } from 'react-icons/gr';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
-import { loginThunk } from 'redux/auth/operations';
+import { registerThunk } from 'redux/auth/operations';
 import { selectIsLoggedIn } from 'redux/auth/selector';
 import styled from 'styled-components';
 
@@ -13,7 +13,7 @@ const Register = () => {
 
   const { register, reset, handleSubmit } = useForm();
   const submit = data => {
-    dispatch(loginThunk(data));
+    dispatch(registerThunk(data));
     console.log(data);
   };
   if (isLoggedIn) {
@@ -25,7 +25,14 @@ const Register = () => {
         <h1>
           <GrContactInfo /> <span>Phonebook</span>
         </h1>
-
+        <label>
+          Name:
+          <input
+            {...register('name', { required: true, minLength: 3 })}
+            type="text"
+            placeholder="Enter you name"
+          />
+        </label>
         <label>
           Email:
           <input
@@ -44,7 +51,7 @@ const Register = () => {
         </label>
         <button>Sign up</button>
         <span>
-          Have an account? <Link to={'/register'}>Log up</Link>
+          Have an account? <Link to={'/login'}>Log in</Link>
         </span>
       </StyledForm>
     </StyledWrapper>

@@ -23,6 +23,7 @@ export const StyledForm = styled(motion.form)`
     gap: 5px;
   }
   input {
+    font-size: 20px;
     height: 40px;
     padding: 5px 15px;
     max-width: 420px;

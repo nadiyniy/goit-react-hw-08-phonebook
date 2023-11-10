@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarLoader, BeatLoader } from 'react-spinners';
+import { BarLoader } from 'react-spinners';
 import styled from 'styled-components';
 
 const Loader = () => {

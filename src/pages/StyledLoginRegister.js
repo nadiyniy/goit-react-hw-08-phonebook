@@ -16,6 +16,7 @@ export const StyledForm = styled(motion.form)`
   width: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid gray;
 
   label {
     display: flex;

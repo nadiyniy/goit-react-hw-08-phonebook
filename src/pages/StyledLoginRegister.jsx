@@ -22,6 +22,14 @@ export const StyledForm = styled(motion.form)`
     display: flex;
     flex-direction: column;
     gap: 5px;
+    position: relative;
+    p {
+      position: absolute;
+      bottom: -11px;
+      right: 0;
+      color: #ff0000;
+      font-size: 14px;
+    }
   }
   input {
     height: 40px;
@@ -30,7 +38,12 @@ export const StyledForm = styled(motion.form)`
     max-width: 420px;
     border-radius: 10px;
     border: 1px solid black;
+    margin-bottom: 10px;
   }
+  input:invalid {
+    border: 2px solid red;
+  }
+
   button {
     width: 120px;
     height: 40px;

@@ -5,7 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { registerThunk } from 'redux/auth/operations';
 import { selectIsLoggedIn } from 'redux/auth/selector';
-import { StyledForm, StyledWrapper } from './StyledLoginRegister';
+import {
+  StyledForm,
+  StyledImageContainer,
+  StyledWrapper,
+} from './StyledLoginRegister';
+import phoneImage from '../image/phoneBook.PNG';
+import styled from 'styled-components';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -21,6 +27,9 @@ const Register = () => {
   }
   return (
     <StyledWrapper>
+      <StyledImageContainer>
+        <img src={phoneImage} alt="Phonebook"></img>
+      </StyledImageContainer>
       <StyledForm onSubmit={handleSubmit(submit)}>
         <h1>
           <GrContactInfo /> <span>Phonebook</span>

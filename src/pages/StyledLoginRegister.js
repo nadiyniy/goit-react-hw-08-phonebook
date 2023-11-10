@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
   display: flex;
-  inset: 0;
   justify-content: center;
   align-items: center;
   padding: 20px 10px;
@@ -13,7 +12,6 @@ export const StyledForm = styled.form`
   border-radius: 10px;
   padding: 5px 10px;
   max-width: 420px;
-  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -55,5 +53,11 @@ export const StyledForm = styled.form`
     display: flex;
     gap: 10px;
     align-items: center;
+  }
+`;
+export const StyledImageContainer = styled.div`
+  max-width: 300px;
+  @media screen and (max-width: 767.98px) {
+    display: none;
   }
 `;

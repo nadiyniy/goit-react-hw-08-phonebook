@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import { GrContactInfo } from 'react-icons/gr';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
 import { logoutThunk } from 'redux/auth/operations';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/selector';
 import styled from 'styled-components';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiFillCloseCircle } from 'react-icons/ai';
 
 const Navbar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

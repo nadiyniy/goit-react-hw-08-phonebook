@@ -10,7 +10,7 @@ import {
   StyledImageContainer,
   StyledWrapper,
 } from './StyledLoginRegister';
-import phoneImage from '../image/booksphone_1.webp';
+import phoneImage from '../image/phoneBook.webp';
 
 const Register = () => {
   const dispatch = useDispatch();

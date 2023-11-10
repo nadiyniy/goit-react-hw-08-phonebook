@@ -56,7 +56,7 @@ const Register = () => {
             placeholder="Enter you password"
           />
         </label>
-        <button>Sign up</button>
+        <button>Sign in</button>
         <span>
           Have an account? <Link to={'/register'}>Log up</Link>
         </span>

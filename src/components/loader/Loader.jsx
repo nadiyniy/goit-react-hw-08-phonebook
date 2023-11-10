@@ -3,7 +3,7 @@ import { BarLoader } from 'react-spinners';
 import styled from 'styled-components';
 
 const Loader = () => {
-  return <BarLoader color="lightblue" width={20} />;
+  return <BarLoader color="lightblue" width={39} />;
 };
 
 export const LoaderBig = () => {

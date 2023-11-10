@@ -1,4 +1,4 @@
-const { createSlice, isAnyOf, createReducer } = require('@reduxjs/toolkit');
+const { createSlice, isAnyOf } = require('@reduxjs/toolkit');
 const {
   registerThunk,
   loginThunk,

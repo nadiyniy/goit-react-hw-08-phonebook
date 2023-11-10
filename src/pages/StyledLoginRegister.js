@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
@@ -6,7 +7,7 @@ export const StyledWrapper = styled.div`
   align-items: center;
   padding: 20px 10px;
 `;
-export const StyledForm = styled.form`
+export const StyledForm = styled(motion.form)`
   gap: 10px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
@@ -55,7 +56,7 @@ export const StyledForm = styled.form`
     align-items: center;
   }
 `;
-export const StyledImageContainer = styled.div`
+export const StyledImageContainer = styled(motion.div)`
   max-width: 300px;
   @media screen and (max-width: 767.98px) {
     display: none;

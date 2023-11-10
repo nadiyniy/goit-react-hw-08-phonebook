@@ -9,6 +9,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.1",
+    "framer-motion": "^10.16.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.48.2",

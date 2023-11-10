@@ -1,15 +1,15 @@
 import React from 'react';
-import { BeatLoader } from 'react-spinners';
+import { BarLoader, BeatLoader } from 'react-spinners';
 import styled from 'styled-components';
 
 const Loader = () => {
-  return <BeatLoader color="lightblue" size={8.5} />;
+  return <BarLoader color="lightblue" width={20} />;
 };
 
 export const LoaderBig = () => {
   return (
     <StyledContainer>
-      <BeatLoader color="lightblue" size={100} />
+      <BarLoader color="lightblue" size={100} />
     </StyledContainer>
   );
 };

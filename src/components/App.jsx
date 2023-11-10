@@ -1,23 +1,24 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import Layout from './Layout/Layout';
 import NotFound from 'pages/NotFound';
 import Register from 'pages/Register';
 import Login from 'pages/Login';
 import Contacts from 'pages/Contacts';
-import { useDispatch } from 'react-redux';
 import { refreshThunk } from 'redux/auth/operations';
 import PrivateRoute from './hoc/PrivateRoute';
+import { selectRefresh } from 'redux/auth/selector';
 
 export const App = () => {
   const dispatch = useDispatch();
-
+  const refresh = useSelector(selectRefresh);
   useEffect(() => {
     dispatch(refreshThunk());
     console.log();
   }, [dispatch]);
 
-  return (
+  return refresh ? null : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route

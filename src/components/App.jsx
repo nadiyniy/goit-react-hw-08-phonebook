@@ -15,7 +15,6 @@ export const App = () => {
   const refresh = useSelector(selectRefresh);
   useEffect(() => {
     dispatch(refreshThunk());
-    console.log();
   }, [dispatch]);
 
   return refresh ? null : (

@@ -19,7 +19,6 @@ const Register = () => {
   const { register, handleSubmit } = useForm();
   const submit = data => {
     dispatch(loginThunk(data));
-    console.log(data);
   };
   if (isLoggedIn) {
     return <Navigate to="/" />;

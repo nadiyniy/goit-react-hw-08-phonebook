@@ -11,7 +11,6 @@ import {
   StyledWrapper,
 } from './StyledLoginRegister';
 import phoneImage from '../image/phoneBook.PNG';
-import styled from 'styled-components';
 
 const Register = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { loginThunk } from 'redux/auth/operations';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/selector';
 import { selectIsLoading } from 'redux/selectors';
@@ -16,7 +16,9 @@ const Login = () => {
     dispatch(loginThunk(data));
     console.log(data);
   };
-
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  }
   return (
     <div>
       <form onSubmit={handleSubmit(submit)}>
@@ -30,7 +32,7 @@ const Login = () => {
           type="password"
           placeholder="Enter you password"
         />
-        <button>Sign up</button>
+        <button>Sign in</button>
         <span>
           Don't have an account? <Link to={'/register'}>Sign up</Link>
         </span>

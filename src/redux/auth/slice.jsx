@@ -24,8 +24,8 @@ const slice = createSlice({
         return (state = initialState);
       })
       .addCase(refreshThunk.fulfilled, (state, { payload }) => {
-        state.user.name = payload.user.name;
-        state.user.email = payload.user.email;
+        state.user.name = payload.name;
+        state.user.email = payload.email;
         state.isLoggedIn = true;
       })
       .addMatcher(

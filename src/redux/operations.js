@@ -3,6 +3,7 @@ import axios from 'axios';
 import { setCurrentId } from './contactsSlice';
 
 axios.defaults.baseURL = 'https://654a2082e182221f8d528c04.mockapi.io/';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
 export const fetchDataThunk = createAsyncThunk(
   'fetchAll',

@@ -35,15 +35,7 @@ const Register = () => {
       >
         <img width={300} src={phoneImage} alt="Phonebook"></img>
       </StyledImageContainer>
-      <StyledForm
-        initial={{ x: 500, opacity: 0.5 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          transition: { duration: 1 },
-        }}
-        onSubmit={handleSubmit(submit)}
-      >
+      <StyledForm onSubmit={handleSubmit(submit)}>
         <h1>
           <GrContactInfo /> <span>Phonebook</span>
         </h1>

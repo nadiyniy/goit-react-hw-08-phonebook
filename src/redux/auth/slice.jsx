@@ -47,6 +47,7 @@ const slice = createSlice({
         (state, { payload }) => {
           state.isRefreshing = false;
           state.error = payload;
+          console.log(payload);
         }
       )
       .addMatcher(
@@ -56,6 +57,7 @@ const slice = createSlice({
           state.user.email = payload.user.email;
           state.token = payload.token;
           state.isLoggedIn = true;
+          state.error = '';
         }
       );
   },

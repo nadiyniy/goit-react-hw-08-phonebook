@@ -13,7 +13,7 @@ import {
 import phoneImage from '../image/iphone_login.webp';
 import { toast } from 'react-toastify';
 
-const Register = () => {
+const Login = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
@@ -23,6 +23,7 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const submit = data => {
     dispatch(loginThunk(data));
   };
@@ -36,6 +37,7 @@ const Register = () => {
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }
+
   return (
     <StyledWrapper>
       <StyledImageContainer
@@ -54,7 +56,6 @@ const Register = () => {
         </h1>
 
         <label>
-          Email:
           <input
             {...register('email', {
               required: 'Email is required',
@@ -69,7 +70,6 @@ const Register = () => {
           {errors.email && <p>{errors.email.message}</p>}
         </label>
         <label>
-          Password:
           <input
             {...register('password', {
               required: 'Password is required',
@@ -93,4 +93,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

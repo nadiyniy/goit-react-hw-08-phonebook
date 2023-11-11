@@ -43,15 +43,15 @@ export const StyledContainer = styled.div`
   padding: 10px;
   button {
     background-color: white;
+    font-size: 20px;
 
     padding: 5px 10px;
-    height: 28px;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid black;
+    border: none;
     &:hover,
     &:focus {
-      box-shadow: 0 0 1px 1px black;
+      background-color: #f1f1f1;
     }
   }
 `;

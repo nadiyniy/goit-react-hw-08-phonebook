@@ -18,8 +18,6 @@ const Register = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
 
-  console.log(error);
-
   useEffect(() => {
     if (error) {
       toast.error(error);

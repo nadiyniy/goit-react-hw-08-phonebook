@@ -17,7 +17,6 @@ const Register = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
-  console.log(error);
 
   const {
     register,
@@ -85,9 +84,9 @@ const Register = () => {
           {errors.password && <p>{errors.password.message}</p>}
         </label>
 
-        <button>Sign in</button>
+        <button>Log in</button>
         <span>
-          Have an account? <Link to={'/register'}>Log up</Link>
+          Have an account? <Link to={'/register'}>Sign up</Link>
         </span>
       </StyledForm>
     </StyledWrapper>

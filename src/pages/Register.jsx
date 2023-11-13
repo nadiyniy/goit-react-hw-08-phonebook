@@ -6,7 +6,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { registerThunk } from 'redux/auth/operations';
-import { selectError, selectIsLoggedIn } from 'redux/auth/selector';
+import { selectIsLoggedIn } from 'redux/auth/selector';
 import phoneImage from '../image/iphone_login.webp';
 import {
   StyledForm,
@@ -17,7 +17,6 @@ import {
 const Register = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const error = useSelector(selectError);
 
   // useEffect(() => {
   //   if (error) {

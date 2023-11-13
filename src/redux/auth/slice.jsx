@@ -39,11 +39,7 @@ const slice = createSlice({
         }
       )
       .addMatcher(
-        isAnyOf(
-          logoutThunk.rejected,
-          refreshThunk.rejected
-          // loginThunk.rejected
-        ),
+        isAnyOf(logoutThunk.rejected, refreshThunk.rejected),
         (state, { payload }) => {
           state.isRefreshing = false;
           state.error = payload;

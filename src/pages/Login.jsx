@@ -17,7 +17,6 @@ import {
 const Login = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const error = useSelector(selectError);
 
   const {
     register,
@@ -26,7 +25,11 @@ const Login = () => {
   } = useForm();
 
   const submit = data => {
-    dispatch(loginThunk(data));
+    dispatch(loginThunk(data))
+      .unwrap()
+      .catch(e => {
+        toast.error('Email or password incorrect');
+      });
   };
 
   // useEffect(() => {
@@ -36,11 +39,11 @@ const Login = () => {
   // }, [error]);
 
   if (isLoggedIn) {
-    return <Navigate to="/" />;
+    <Navigate to="/" />;
   }
-  if (error === 'Request failed with status code 400') {
-    toast.error('Email or password incorrect');
-  }
+  // if (error === 'Request failed with status code 400') {
+  //   return toast.error('Email or password incorrect');
+  // }
 
   return (
     <StyledWrapper>

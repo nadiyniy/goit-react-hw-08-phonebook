@@ -32,11 +32,15 @@ const Register = () => {
   } = useForm();
 
   const submit = data => {
-    dispatch(registerThunk(data));
+    dispatch(registerThunk(data))
+      .unwrap()
+      .catch(e => {
+        toast.error('Email or password invalid');
+      });
   };
-  if (error === 'Request failed with status code 400') {
-    toast.error('Email or password invalid');
-  }
+  // if (error === 'Request failed with status code 400') {
+  //   toast.error('Email or password invalid');
+  // }
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }

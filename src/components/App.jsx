@@ -9,6 +9,8 @@ import Contacts from 'pages/Contacts';
 import { refreshThunk } from 'redux/auth/operations';
 import PrivateRoute from './hoc/PrivateRoute';
 import { selectRefresh } from 'redux/auth/selector';
+import { ClipLoader } from 'react-spinners';
+import styled from 'styled-components';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -17,7 +19,11 @@ export const App = () => {
     dispatch(refreshThunk());
   }, [dispatch]);
 
-  return refresh ? null : (
+  return refresh ? (
+    <StyledLoader>
+      <ClipLoader color="lightblue" size={100} />
+    </StyledLoader>
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route
@@ -35,3 +41,12 @@ export const App = () => {
     </Routes>
   );
 };
+
+const StyledLoader = styled.div`
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

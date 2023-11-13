@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 
 import { registerThunk } from 'redux/auth/operations';
 import { selectError, selectIsLoggedIn } from 'redux/auth/selector';
-
 import phoneImage from '../image/iphone_login.webp';
 import {
   StyledForm,
@@ -19,6 +18,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
+  console.log(isLoggedIn, 'regist');
 
   useEffect(() => {
     if (error) {

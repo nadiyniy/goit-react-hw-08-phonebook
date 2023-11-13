@@ -3,20 +3,22 @@ import { useForm } from 'react-hook-form';
 import { GrContactInfo } from 'react-icons/gr';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 import { loginThunk } from 'redux/auth/operations';
 import { selectError, selectIsLoggedIn } from 'redux/auth/selector';
+import phoneImage from '../image/iphone_login.webp';
 import {
   StyledForm,
   StyledImageContainer,
   StyledWrapper,
 } from './StyledLoginRegister';
-import phoneImage from '../image/iphone_login.webp';
-import { toast } from 'react-toastify';
 
 const Login = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
+  console.log(isLoggedIn, 'log');
 
   const {
     register,

@@ -32,22 +32,21 @@ const slice = createSlice({
         state.isRefreshing = false;
       })
       .addMatcher(
-        isAnyOf(logoutThunk.pending, refreshThunk.pending, loginThunk.pending),
+        isAnyOf(logoutThunk.pending, refreshThunk.pending),
         (state, { payload }) => {
           state.isRefreshing = true;
-          state.error = payload;
+          state.error = '';
         }
       )
       .addMatcher(
         isAnyOf(
           logoutThunk.rejected,
-          refreshThunk.rejected,
-          loginThunk.rejected
+          refreshThunk.rejected
+          // loginThunk.rejected
         ),
         (state, { payload }) => {
           state.isRefreshing = false;
           state.error = payload;
-          console.log(payload);
         }
       )
       .addMatcher(

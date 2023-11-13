@@ -18,7 +18,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
-  console.log(isLoggedIn, 'log');
 
   const {
     register,
@@ -30,14 +29,17 @@ const Login = () => {
     dispatch(loginThunk(data));
   };
 
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
+  // useEffect(() => {
+  //   if (error) {
+  //     toast.error(error);
+  //   }
+  // }, [error]);
 
   if (isLoggedIn) {
     return <Navigate to="/" />;
+  }
+  if (error === 'Request failed with status code 400') {
+    toast.error('Email or password incorrect');
   }
 
   return (

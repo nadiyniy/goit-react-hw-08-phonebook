@@ -50,6 +50,12 @@ const slice = createSlice({
         }
       )
       .addMatcher(
+        isAnyOf(registerThunk.rejected, loginThunk.rejected),
+        (state, { payload }) => {
+          state.error = payload;
+        }
+      )
+      .addMatcher(
         isAnyOf(registerThunk.fulfilled, loginThunk.fulfilled),
         (state, { payload }) => {
           state.user.name = payload.user.name;

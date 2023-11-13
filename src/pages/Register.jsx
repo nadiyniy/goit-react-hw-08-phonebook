@@ -18,13 +18,12 @@ const Register = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const error = useSelector(selectError);
-  console.log(isLoggedIn, 'regist');
 
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
+  // useEffect(() => {
+  //   if (error) {
+  //     toast.error(error);
+  //   }
+  // }, [error]);
 
   const {
     register,
@@ -35,6 +34,9 @@ const Register = () => {
   const submit = data => {
     dispatch(registerThunk(data));
   };
+  if (error === 'Request failed with status code 400') {
+    toast.error('Email or password invalid');
+  }
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }

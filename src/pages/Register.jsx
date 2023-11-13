@@ -18,12 +18,6 @@ const Register = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //   }
-  // }, [error]);
-
   const {
     register,
     handleSubmit,
@@ -37,12 +31,11 @@ const Register = () => {
         toast.error('Email or password invalid');
       });
   };
-  // if (error === 'Request failed with status code 400') {
-  //   toast.error('Email or password invalid');
-  // }
+
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }
+
   return (
     <StyledWrapper>
       <StyledImageContainer>

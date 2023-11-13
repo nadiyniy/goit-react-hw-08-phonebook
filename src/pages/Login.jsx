@@ -32,18 +32,9 @@ const Login = () => {
       });
   };
 
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //   }
-  // }, [error]);
-
   if (isLoggedIn) {
-    <Navigate to="/" />;
+    return <Navigate to="/" />;
   }
-  // if (error === 'Request failed with status code 400') {
-  //   return toast.error('Email or password incorrect');
-  // }
 
   return (
     <StyledWrapper>

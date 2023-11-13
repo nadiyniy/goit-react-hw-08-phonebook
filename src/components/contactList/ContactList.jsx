@@ -6,11 +6,12 @@ import {
   selectIsLoading,
   selectCurrentId,
 } from 'redux/selectors';
-import { StyledListUl } from './ContactList.styled';
 import { useEffect } from 'react';
-import { deleteContactThunk } from 'redux/operations';
 import { toast } from 'react-toastify';
+
+import { deleteContactThunk } from 'redux/operations';
 import Loader from 'components/loader/Loader';
+import { StyledListUl } from './ContactList.styled';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);

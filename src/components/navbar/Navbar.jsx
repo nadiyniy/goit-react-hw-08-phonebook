@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+
 import { logoutThunk } from 'redux/auth/operations';
 import { selectIsLoggedIn, selectUser } from 'redux/auth/selector';
-import styled from 'styled-components';
 
 const Navbar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

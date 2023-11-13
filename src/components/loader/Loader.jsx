@@ -13,6 +13,7 @@ export const LoaderBig = () => {
     </StyledContainer>
   );
 };
+
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;

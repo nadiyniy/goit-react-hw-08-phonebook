@@ -1,14 +1,15 @@
-import { StyledMainWrapper } from 'components/App.styled';
+import React, { useEffect } from 'react';
+import { GrContactInfo } from 'react-icons/gr';
+import { useDispatch, useSelector } from 'react-redux';
+
 import ContactForm from 'components/contactForm/ContactForm';
 import ContactList from 'components/contactList/ContactList';
 import Filter from 'components/filter/Filter';
 import { LoaderBig } from 'components/loader/Loader';
 import Notification from 'components/notifications/Notification';
-import React, { useEffect } from 'react';
-import { GrContactInfo } from 'react-icons/gr';
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchDataThunk } from 'redux/operations';
 import { selectContacts, selectFilter, selectIsLoading } from 'redux/selectors';
+import { StyledMainWrapper } from 'components/App.styled';
 
 const Contacts = () => {
   const contacts = useSelector(selectContacts);

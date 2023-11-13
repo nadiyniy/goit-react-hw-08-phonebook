@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
 import { setCurrentId } from './contactsSlice';
 import { goItApi } from './auth/operations';
 

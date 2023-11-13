@@ -6,7 +6,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { loginThunk } from 'redux/auth/operations';
-import { selectError, selectIsLoggedIn } from 'redux/auth/selector';
+import { selectIsLoggedIn } from 'redux/auth/selector';
 import phoneImage from '../image/iphone_login.webp';
 import {
   StyledForm,

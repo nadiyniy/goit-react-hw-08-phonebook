@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Layout from './Layout/Layout';
+import { ClipLoader } from 'react-spinners';
+import styled from 'styled-components';
+
 import NotFound from 'pages/NotFound';
 import Register from 'pages/Register';
 import Login from 'pages/Login';
 import Contacts from 'pages/Contacts';
 import { refreshThunk } from 'redux/auth/operations';
-import PrivateRoute from './hoc/PrivateRoute';
 import { selectRefresh } from 'redux/auth/selector';
-import { ClipLoader } from 'react-spinners';
-import styled from 'styled-components';
+import PrivateRoute from './hoc/PrivateRoute';
+import Layout from './Layout/Layout';
 
 export const App = () => {
   const dispatch = useDispatch();

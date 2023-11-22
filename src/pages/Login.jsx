@@ -84,7 +84,7 @@ const Login = () => {
 
         <button>Log in</button>
         <span>
-          Have an account? <Link to={'/register'}>Sign up</Link>
+          Don't have an account? <Link to={'/register'}>Sign up</Link>
         </span>
       </StyledForm>
     </StyledWrapper>
